@@ -96,6 +96,18 @@ public class DBUtils {
 		pstm.executeUpdate();
 	}
 
+	public static void insertProduct(Connection conn, Product product) throws SQLException {
+		String sql = "Insert into Product(Code, Name,Price) values (?,?,?)";
+
+		PreparedStatement pstm = conn.prepareStatement(sql);
+
+		pstm.setString(1, product.getCode());
+		pstm.setString(2, product.getName());
+		pstm.setFloat(3, product.getPrice());
+
+		pstm.executeUpdate();
+	}
+
 	public static void deleteProduct(Connection conn, String code) throws SQLException {
 		String sql = "Delete Product where Code= ?";
 
