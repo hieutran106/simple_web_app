@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class MySQLConnUtils {
 	public static Connection getMySQLConnection() throws ClassNotFoundException, SQLException {
 		String hostName="localhost";
-		String dbName="simple_app";
+		String dbName="hieu_simpleweb";
 		String userName="root";
 		String password="123456a@";
 		return getMySQLConnection(hostName, dbName, userName, password);
